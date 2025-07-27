@@ -1,0 +1,18 @@
+<div>
+    @for (task of tasks; track $index) {
+    <div class="card-contents">
+        <div class="title-task-card">
+            <p>Tarefa:{{ task.task }}</p>
+        </div>
+        <p class="descriptionTask">{{ task.descriptionTask }}</p>
+        <p>Status: {{ task.active }}</p>
+        <p class="creation-date-task">
+            Criado em: {{ task.creationDate | date : "dd/MM/yyyy HH:mm" }}
+        </p>
+        <p>
+            Última Modificação:
+            {{ task.modificationDate | date : "dd/MM/yyyy HH:mm" }}
+        </p>
+    </div>
+    }
+</div>
